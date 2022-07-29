@@ -1,0 +1,45 @@
+.cta-text {
+    display: inline-block;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+.cta__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cta__item {
+    border-radius: 50%;
+    background-color: var(--bcg-social-links-color);
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.cta__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background-color var(--transition-function), fill var(--transition-function);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+    }
+}
+
+.cta__icon {
+    fill: var(--white-color);
+}

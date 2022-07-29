@@ -1,0 +1,33 @@
+.address__contacts {
+    margin-top: 20px;
+    margin-right: 70px;
+}
+
+.address__contacts-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.address__contacts-item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.address__contacts-link {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--additional-contact-color);
+    transition: color var(--transition-function);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.address__contacts-link--white {
+    color: var(--white-color);
+}
