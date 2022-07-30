@@ -41,45 +41,49 @@
                 </li>
             </ul>
             <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-                <svg class="" width="24px" height="16px">
+                <svg class="menu-toggle__icon" width="24px" height="16px">
                     <use href="./images/icons.svg#icon-menu"></use>
                 </svg>
             </button>
             <div class="menu-container js-menu-container" id="mobile-menu">
-                <button type="button" class="menu-toggle js-close-menu">
-                    <svg class="" width="20px" height="20px">
+                <button type="button" class="menu-toggle menu-container__menu-toggle js-close-menu">
+                    <svg class="menu-container__icon" width="18px" height="18px">
                         <use href="./images/icons.svg#icon-Vector1"></use>
                     </svg>
                 </button>
-                <ul>
-                    <li class=""><a href="#" class="">Студія</a></li>
-                    <li class=""><a href="./portfolio.html" class="">Портфоліо</a></li>
-                    <li class=""><a href="#" class="">Контакти</a></li>
+                <ul class="menu-container__list">
+                    <li class="menu-container__item">
+                        <a href="#" class="menu-container__link menu-container__link--current">Студія</a>
+                    </li>
+                    <li class="menu-container__item">
+                        <a href="./portfolio.html" class="menu-container__link">Портфоліо</a>
+                    </li>
+                    <li class="menu-container__item">
+                        <a href="#" class="menu-container__link">Контакти</a>
+                    </li>
                 </ul>
-                <ul class="">
-                    <li class="">
-                        <a href="tel:+380961111111" class="">
-                            +38 096 111 11 11
+                <ul class="menu-container__contacts">
+                    <li class="menu-container__tel">
+                        <a href="tel:+380961111111" class="menu-container__tel-link">+38 096 111 1111
                         </a>
                     </li>
-                    <li class="">
-                        <a href="mailto:info@devstudio.com" class="">
-                            info@devstudio.com
+                    <li class="menu-container__mail">
+                        <a href="mailto:info@devstudio.com" class="menu-container__mail-link">info@devstudio.com
                         </a>
                     </li>    
                 </ul>
-                <ul>
-                    <li>
-                        <a href="#">Instagram</a>
+                <ul class="menu-container__social">
+                    <li class="menu-container__social-item">
+                        <a href="#" class="menu-container__social-link">Instagram</a>
                     </li>
-                    <li>
-                        <a href="#">Twitter</a>
+                    <li class="menu-container__social-item">
+                        <a href="#" class="menu-container__social-link">Twitter</a>
                     </li>
-                    <li>
-                        <a href="#">Facebook</a>
+                    <li class="menu-container__social-item">
+                        <a href="#" class="menu-container__social-link">Facebook</a>
                     </li>
-                    <li>
-                        <a href="#">LinkedIn</a>
+                    <li class="menu-container__social-item">
+                        <a href="#" class="menu-container__social-link">LinkedIn</a>
                     </li>
                 </ul>
             </div>
@@ -138,38 +142,45 @@
                 </ul>
             </div>
         </section>
-        <!-- <section class="section section__no-padding-top">
+        <section class="section section__no-padding-top">
             <div class="container">
-                <h2 class="section__title">Чем мы занимаемся</h2>
+                <h2 class="section__title">Чим ми займаємося</h2>
                 <ul class="work-style">
                     <li class="work-style__item">
                         <div class="work-style__thumb">
-                            <img src="./images/img.jpg" alt="Вёрстка веб-страниц" width="370">
+                            <img 
+                            srcset="./images/img.jpg 1x, ./images/img@2x.jpg 2x" 
+                            src="./images/img.jpg" 
+                            alt="Вёрстка веб-страниц" width="370">
                             <div class="work-style__dscr">
-                                <p class="work-style__text">Десктопные приложения</p>
+                                <p class="work-style__text">Десктопні додатки</p>
                             </div>
                         </div>
                     </li>
                     <li class="work-style__item">
                         <div class="work-style__thumb">
-                            <img src="./images/img1.jpg" alt="Разработка веб-дизайна" width="370">
+                            <img 
+                            srcset="./images/img2.jpg 1x, ./images/img2@2x.jpg 2x" 
+                            src="./images/img2.jpg" alt="Разработка веб-дизайна" width="370">
                             <div class="work-style__dscr">
-                                <p class="work-style__text">Мобильные приложения</p>
+                                <p class="work-style__text">Мобільні додатки</p>
                             </div>
                         </div>
                     </li>
                     <li class="work-style__item">
                         <div class="work-style__thumb">
-                            <img src="./images/img2.jpg" alt="Графическое оформление" width="370">
+                            <img 
+                            srcset="./images/img3.jpg 1x, ./images/img3@2x.jpg 2x"
+                            src="./images/img3.jpg" alt="Графическое оформление" width="370">
                             <div class="work-style__dscr">
-                                <p class="work-style__text">Дизайнерские решения</p>
+                                <p class="work-style__text">Дизайнерські рішення</p>
                             </div>
                         </div>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="section section__team">
+        <!-- <section class="section section__team">
             <div class="container">
                 <h2 class="section__title">Наша команда</h2>
                 <ul class="team-members">
@@ -433,18 +444,18 @@
                 </form>
             </div>
        </div>
-    </footer>
+    </footer> -->
     <div class="backdrop backdrop--is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="button button__modal-close" data-modal-close>
-                <svg class="icon" width="11px" height="11px">
+                <svg class="button__modal-close-icon" width="11px" height="11px">
                     <use href="./images/icons.svg#icon-Vector1"></use>
                 </svg>
             </button>
-            <h2 class="modal__cta">Оставьте свои данные, мы вам перезвоним</h2>
+            <h2 class="modal__cta">Залиште свої дані, ми вам передзвонимо</h2>
             <form class="modal-form" autocomplete="off">
                 <div class="modal-form__field">
-                    <label for="name" class="modal-form__label">Имя</label>
+                    <label for="name" class="modal-form__label">Ім'я</label>
                     <div class="modal-form__field-input">
                         <input type="text" id="name" name="name" required class="modal-form__input">
                         <svg class="modal-form__icon" width="18px" height="18px">
@@ -462,7 +473,7 @@
                     </div>
                 </div>
                 <div class="modal-form__field">
-                    <label for="mail" class="modal-form__label">Почта</label>
+                    <label for="mail" class="modal-form__label">Пошта</label>
                     <div class="modal-form__field-input">
                         <input type="email" id="mail" name="mail" required class="modal-form__input">
                         <svg class="modal-form__icon" width="18px" height="18px">
@@ -471,8 +482,8 @@
                     </div>
                 </div>
                 <div class="modal-form__field">
-                    <label for="comment" class="modal-form__label">Комментарий</label>
-                    <textarea name="comment" id="comment" rows="7" placeholder="Введите текст" class="modal-form__textarea"></textarea>
+                    <label for="comment" class="modal-form__label">Коментар</label>
+                    <textarea name="comment" id="comment" rows="7" placeholder="Введіть текст" class="modal-form__textarea"></textarea>
                 </div>
                 <div class="modal-form__checkbox-field">
                     <label for="agreement" class="modal-form__checkbox-label">
@@ -480,14 +491,14 @@
                         <svg class="modal-form__checkbox-icon" width="16px" height="15px">
                             <use href="./images/icons.svg#icon-icon-check"></use>
                         </svg>
-                        Соглашаюсь с рассылкой и принимаю <a href="#" class="modal-form__checkbox-policy">Условия договора</a>
+                        Погоджуюся з розсилкою та приймаю<a href="#" class="modal-form__checkbox-policy">Умови договору</a>
                     </label>
                 </div>
-                <button type="submit" class="button modal-form__button">Отправить</button>
+                <button type="submit" class="button modal-form__button">Відправити</button>
             </form>
         </div>
     </div>
-    <script src="./js/modal.js"></script>   -->
+    <script src="./js/modal.js"></script>  
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
         integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
         crossorigin="anonymous"></script>

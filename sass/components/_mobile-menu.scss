@@ -1,9 +1,13 @@
 .menu-container {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    padding: 48px 83px 48px 40px;
     background-color: var(--white-color);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 
@@ -26,7 +30,114 @@
     outline: none;
     background-color: transparent;
 
+    &:hover .menu-container__icon, 
+    &:focus .menu-container__icon  {
+        fill: var(--accent-color);
+    }
+
+    &:hover .menu-toggle__icon,
+    &:focus .menu-toggle__icon {
+        fill: var(--accent-color);
+    }
+
     @media screen and (min-width: 769px) {
         display: none;
     }
+}
+
+.menu-container__menu-toggle {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 21px;
+    right: 25px;
+}
+
+
+
+
+
+
+
+
+.menu-container__list {
+    @extend %list;
+}
+
+.menu-container__item:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.menu-container__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+
+    &--current {
+        color: var(--accent-color);
+    }
+}
+
+.menu-container__contacts {
+    @extend %list;
+    margin-top: auto;
+}
+
+.menu-container__tel {
+    margin-bottom: 32px;
+}
+
+.menu-container__tel-link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+}
+
+.menu-container__mail {
+    margin-bottom: 64px;
+}
+
+.menu-container__mail-link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+}
+
+.menu-container__social {
+    @extend %list;
+    display: flex;
+}
+
+.menu-container__social-item:not(:last-child) {
+    position: relative;
+    margin-right: 20px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 10px;
+        right: -19px;
+        width: 22px;
+        height: 1px;
+        background-color: var(--border-modal-color);
+        transform: rotate(90deg);
+    }
+}
+
+.menu-container__social-link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
 }
