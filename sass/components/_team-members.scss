@@ -3,27 +3,43 @@
 }
 
 .team-members {
-    display: flex;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: -30px;
-    margin-top: -30px;
+    @extend %list;
     text-align: center;
-    padding: 0;
-    list-style: none;
+    
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -30px;
+        margin-top: -30px;
+    }
 }
 
 .team-members__item {
-    flex-basis: calc(100% / 4 - 30px);
-    margin-left: 30px;
-    margin-top: 30px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     background-color: var(--white-color);
+
+    &:not(:last-child) {
+        @media screen and (max-width: 767px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-left: 30px;
+        margin-top: 30px;
+        flex-basis: calc(100% / 2 - 30px);
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-left: 30px;
+        margin-top: 30px;
+        flex-basis: calc(100% / 4 - 30px);
+    }
 }
 
 .team-members__cards {
-    padding: 30px 0;
+    padding: 30px 0 24px 0;
 }
 
 .team-members__title {
@@ -31,8 +47,12 @@
     margin-bottom: 0;
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.19;
+    line-height: 1.17;
     color: var(--title-text-color);
+
+    @media screen and (min-width: 1200px) {
+        line-height: 1.19;
+    }
 }
 
 .team-members__text {
@@ -40,18 +60,25 @@
     margin-bottom: 0;
     font-size: 16px;
     line-height: 1.19;
+    
+    @media screen and (min-width: 768px) {
+        line-height: 1.17;
+    }
 }
 
 .team-members__social {
+    @extend %list;
     display: flex;
-    margin: 16px 0 0 0;
-    padding: 0 32px;
-    justify-content: space-around;
-    list-style: none;
+    justify-content: center;
+    margin-top: 16px;
 }
 
 .team-members__social-item {
     border-radius: 50%;
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
 }
 
 .team-members__social-link {

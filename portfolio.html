@@ -26,7 +26,7 @@
             <ul class="header-contacts">
                 <li class="header-contacts__item">
                     <a href="mailto:info@devstudio.com" class="header-contacts__link">
-                        <svg class="header-contacts__icon" width="16px" height="12px">
+                        <svg class="header-contacts__icon" width="14px" height="12px">
                             <use href="./images/icons.svg#icon-envelope"></use>
                         </svg>
                         info@devstudio.com
@@ -34,23 +34,70 @@
                 </li>
                 <li class="header-contacts__item">
                     <a href="tel:+380961111111" class="header-contacts__link">
-                        <svg class="header-contacts__icon" width="10px" height="16px">
+                        <svg class="header-contacts__icon" width="10px" height="14px">
                             <use href="./images/icons.svg#icon-smartphone"></use>
                         </svg>
                         +38 096 111 11 11
                     </a>
                 </li>
             </ul>
+            <button type="button" class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="menu-toggle__icon" width="24px" height="16px">
+                    <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
+            <div class="menu-container js-menu-container" id="mobile-menu">
+                <button type="button" class="menu-toggle menu-container__menu-toggle js-close-menu">
+                    <svg class="menu-container__icon" width="18px" height="18px">
+                        <use href="./images/icons.svg#icon-Vector1"></use>
+                    </svg>
+                </button>
+                <ul class="menu-container__list">
+                    <li class="menu-container__item">
+                        <a href="./index.html" class="menu-container__link">Студія</a>
+                    </li>
+                    <li class="menu-container__item">
+                        <a href="#" class="menu-container__link menu-container__link--current">Портфоліо</a>
+                    </li>
+                    <li class="menu-container__item">
+                        <a href="#" class="menu-container__link">Контакти</a>
+                    </li>
+                </ul>
+                <ul class="menu-container__contacts">
+                    <li class="menu-container__tel">
+                        <a href="tel:+380961111111" class="menu-container__tel-link">+38 096 111 1111
+                        </a>
+                    </li>
+                    <li class="menu-container__mail">
+                        <a href="mailto:info@devstudio.com" class="menu-container__mail-link">info@devstudio.com
+                        </a>
+                    </li>
+                </ul>
+                <ul class="menu-container__social">
+                    <li class="menu-container__social-item">
+                        <a href="#" class="menu-container__social-link">Instagram</a>
+                    </li>
+                    <li class="menu-container__social-item">
+                        <a href="#" class="menu-container__social-link">Twitter</a>
+                    </li>
+                    <li class="menu-container__social-item">
+                        <a href="#" class="menu-container__social-link">Facebook</a>
+                    </li>
+                    <li class="menu-container__social-item">
+                        <a href="#" class="menu-container__social-link">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
     <main>
         <section class="section">
             <div class="container">
-                <h1 class="section__title section__title--visually-hidden">Наши работы</h1>
+                <h1 class="section__title section__title--visually-hidden">Наші работи</h1>
                 <ul class="filter">
-                    <li class="filter__item"><button type="button" class="button button--secondary">Все</button></li>
-                    <li class="filter__item"><button type="button" class="button button--secondary">Веб-сайты</button></li>
-                    <li class="filter__item"><button type="button" class="button button--secondary">Приложения</button></li>
+                    <li class="filter__item"><button type="button" class="button button--secondary">Всі</button></li>
+                    <li class="filter__item"><button type="button" class="button button--secondary">Веб-сайти</button></li>
+                    <li class="filter__item"><button type="button" class="button button--secondary">Додатки</button></li>
                     <li class="filter__item"><button type="button" class="button button--secondary">Дизайн</button></li>
                     <li class="filter__item"><button type="button" class="button button--secondary">Маркетинг</button></li>
                 </ul>
@@ -58,9 +105,12 @@
                     <li class="works__item">
                         <a href="#" class="works__link">
                             <div class="works__thumb"> 
-                                <img src="./images/work1.jpg" alt="Экран ноутбука с сайтом" width="370">
+                                <img srcset="./images/work1.jpg 1x, ./images/work1@2x.jpg 2x" 
+                                src="./images/work1.jpg" width="450">
                                 <div class="works__overlay">
-                                    <p class="works__dscr">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
+                                    <p class="works__dscr">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                                    вичерпні відомості про компанію чи приватну особу.
+                                    </p>
                                 </div>
                             </div>                            
                             <div class="works__cards">
@@ -72,9 +122,12 @@
                     <li class="works__item">
                         <a href="#" class="works__link">
                             <div class="works__thumb">
-                                <img src="./images/work2.jpg" alt="Два баскетболиста" width="370">
+                                <img srcset="./images/work2.jpg 1x, ./images/work2@2x.jpg 2x" 
+                                src="./images/work2.jpg" width="450">
                                 <div class="works__overlay">
-                                    <p class="works__dscr">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
+                                    <p class="works__dscr">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                                    вичерпні відомості про компанію чи приватну особу.
+                                    </p>
                                 </div>
                             </div>
                             <div class="works__cards">
@@ -86,23 +139,30 @@
                     <li class="works__item">
                         <a href="#" class="works__link">
                             <div class="works__thumb">
-                                <img src="./images/work3.jpg" alt="Лого ресторана морепродуктов" width="370">
+                                <img srcset="./images/work3.jpg 1x, ./images/work3@2x.jpg 2x" 
+                                src="./images/work3.jpg" 
+                                alt="Лого ресторана морепродуктов" width="450">
                                 <div class="works__overlay">
-                                    <p class="works__dscr">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
+                                    <p class="works__dscr">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                                    вичерпні відомості про компанію чи приватну особу.
+                                    </p>
                                 </div>
                             </div>
                             <div class="works__cards">
                                 <h2 class="works__title">Ресторан Seafood</h2>
-                                <p class="works__text">Приложение</p>
+                                <p class="works__text">Додаток</p>
                             </div>
                         </a>
                     </li>
                     <li class="works__item">
                         <a href="#" class="works__link">
                             <div class="works__thumb">
-                                <img src="./images/work4.jpg" alt="Наушники" width="370">
+                                <img srcset="./images/work4.jpg 1x, ./images/work4@2x.jpg 2x" 
+                                src="./images/work4.jpg" alt="Наушники" width="450">
                                 <div class="works__overlay">
-                                    <p class="works__dscr">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
+                                    <p class="works__dscr">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                                    вичерпні відомості про компанію чи приватну особу.
+                                    </p>
                                 </div>
                             </div>
                             <div class="works__cards">
@@ -114,23 +174,29 @@
                     <li class="works__item">
                         <a href="#" class="works__link">
                             <div class="works__thumb">
-                                <img src="./images/work5.jpg" alt="Две коробочки" width="370">
+                                <img srcset="./images/work5.jpg 1x, ./images/work5@2x.jpg 2x" 
+                                src="./images/work5.jpg" alt="Две коробочки" width="450">
                                 <div class="works__overlay">
-                                    <p class="works__dscr">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
+                                    <p class="works__dscr">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                                    вичерпні відомості про компанію чи приватну особу.
+                                    </p>
                                 </div>
                             </div>
                             <div class="works__cards">
                                 <h2 class="works__title">Проект Boxes</h2>
-                                <p class="works__text">Приложение</p>
+                                <p class="works__text">Додаток</p>
                             </div>
                         </a>
                     </li>
                     <li class="works__item">
                         <a href="#" class="works__link">
                             <div class="works__thumb">
-                                <img src="./images/work6.jpg" alt="Моноблок" width="370">
+                                <img srcset="./images/work6.jpg 1x, ./images/work6@2x.jpg 2x" 
+                                src="./images/work6.jpg" alt="Моноблок" width="450">
                                 <div class="works__overlay">
-                                    <p class="works__dscr">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
+                                    <p class="works__dscr">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                                    вичерпні відомості про компанію чи приватну особу.
+                                    </p>
                                 </div>
                             </div>
                             <div class="works__cards">
@@ -142,9 +208,12 @@
                     <li class="works__item">
                         <a href="#" class="works__link">
                             <div class="works__thumb">
-                                <img src="./images/work7.jpg" alt="Журнал" width="370">
+                                <img srcset="./images/work7.jpg 1x, ./images/work7@2x.jpg 2x" 
+                                src="./images/work7.jpg" alt="Журнал" width="450">
                                 <div class="works__overlay">
-                                    <p class="works__dscr">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
+                                    <p class="works__dscr">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                                    вичерпні відомості про компанію чи приватну особу.
+                                    </p>
                                 </div>
                             </div>
                             <div class="works__cards">
@@ -156,9 +225,12 @@
                     <li class="works__item">
                         <a href="#" class="works__link">
                             <div class="works__thumb">
-                                <img src="./images/work8.jpg" alt="Бирка" width="370">
+                                <img srcset="./images/work8.jpg 1x, ./images/work8@2x.jpg 2x" 
+                                src="./images/work8.jpg" alt="Бирка" width="450">
                                 <div class="works__overlay">
-                                    <p class="works__dscr">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
+                                    <p class="works__dscr">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                                    вичерпні відомості про компанію чи приватну особу.
+                                    </p>
                                 </div>
                             </div>
                             <div class="works__cards">
@@ -170,14 +242,17 @@
                     <li class="works__item">
                         <a href="#" class="works__link">
                             <div class="works__thumb">
-                                <img src="./images/work9.jpg" alt="Работа за ноутбуком" width="370">
+                                <img srcset="./images/work9.jpg 1x, ./images/work9@2x.jpg 2x" 
+                                src="./images/work9.jpg" alt="Работа за ноутбуком" width="450">
                                 <div class="works__overlay">
-                                    <p class="works__dscr">Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.</p>
+                                    <p class="works__dscr">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
+                                    вичерпні відомості про компанію чи приватну особу.
+                                    </p>
                                 </div>
                             </div>
                             <div class="works__cards">
                                 <h2 class="works__title">Growing Business</h2>
-                                <p class="works__text">Приложение</p>
+                                <p class="works__text">Додаток</p>
                             </div>
                         </a>
                     </li>
@@ -187,69 +262,77 @@
     </main>       
     <footer class="page-footer">
         <div class="container page-footer__container">
-            <div class="address">
-                <a href="./index.html" class="footer-logo">Web<span class="footer-logo footer-logo--white">Studio</span></a>
-                <address class="address__contacts">
-                    <ul class="address__contacts-list">
-                        <li class="address__contacts-item"><a href="https://goo.gl/maps/piqngm7oDQpEDh6u6" target="_blank"
-                                rel="noopener nofollow noreferrer"
-                                class="address__contacts-link address__contacts-link--white">г. Киев, пр-т Леси Украинки,
-                                26</a></li>
-                        <li class="address__contacts-item"><a href="mailto:info@devstudio.com"
-                                class="address__contacts-link">info@devstudio.com</a></li>
-                        <li class="address__contacts-item"><a href="tel:+380961111111" class="address__contacts-link">+38
-                                096 111 11 11</a></li>
+            <div class="container-tablet-wrapper">
+                <div class="address">
+                    <a href="./index.html" class="footer-logo">Web<span
+                            class="footer-logo footer-logo--white">Studio</span></a>
+                    <address class="address__contacts">
+                        <ul class="address__contacts-list">
+                            <li class="address__contacts-item"><a href="https://goo.gl/maps/piqngm7oDQpEDh6u6"
+                                    target="_blank" rel="noopener nofollow noreferrer"
+                                    class="address__contacts-link address__contacts-link--white">м.
+                                    Київ, пр-т Лесі Українки, 26</a></li>
+                            <li class="address__contacts-item"><a href="mailto:info@devstudio.com"
+                                    class="address__contacts-link">info@devstudio.com</a></li>
+                            <li class="address__contacts-item"><a href="tel:+380961111111"
+                                    class="address__contacts-link">+38 096 111 11
+                                    11</a></li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="cta">
+                    <b class="cta-text">приєднуйтесь</b>
+                    <ul class="cta__list">
+                        <li class="cta__item">
+                            <a href="#" class="cta__link">
+                                <svg class="cta__icon" width="20px" height="20px">
+                                    <use href="./images/icons.svg#icon-instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="cta__item">
+                            <a href="#" class="cta__link">
+                                <svg class="cta__icon" width="20px" height="20px">
+                                    <use href="./images/icons.svg#icon-twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="cta__item">
+                            <a href="#" class="cta__link">
+                                <svg class="cta__icon" width="20px" height="20px">
+                                    <use href="./images/icons.svg#icon-facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="cta__item">
+                            <a href="#" class="cta__link">
+                                <svg class="cta__icon" width="20px" height="20px">
+                                    <use href="./images/icons.svg#icon-linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
                     </ul>
-                </address>
-            </div>
-            <div class="cta">
-                <b class="cta-text">присоединяйтесь</b>
-                <ul class="cta__list">
-                    <li class="cta__item">
-                        <a href="#" class="cta__link">
-                            <svg class="cta__icon" width="20px" height="20px">
-                                <use href="./images/icons.svg#icon-instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="cta__item">
-                        <a href="#" class="cta__link">
-                            <svg class="cta__icon" width="20px" height="20px">
-                                <use href="./images/icons.svg#icon-twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="cta__item">
-                        <a href="#" class="cta__link">
-                            <svg class="cta__icon" width="20px" height="20px">
-                                <use href="./images/icons.svg#icon-facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="cta__item">
-                        <a href="#" class="cta__link">
-                            <svg class="cta__icon" width="20px" height="20px">
-                                <use href="./images/icons.svg#icon-linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+                </div>
             </div>
             <div class="footer-form-wrapper container__footer-form-wrapper">
-                <b class="cta-text">Подпишитесь на рассылку</b>
+                <b class="cta-text">Підпишіться на розсилку</b>
                 <form class="footer-form">
                     <label for="footer-mail" class="footer-form__label footer-form__label--visually-hidden">Почта</label>
                     <input type="email" id="footer-mail" name="mail" placeholder="E-mail" required
                         class="footer-form__input">
-                    <div class="footer-form__button-wrapper">
-                        <button type="submit" class="button footer-form__button">Подписаться</button>
+                    <button type="submit" class="button footer-form__button">Підписатися
                         <svg class="button__icon" width="24px" height="24px">
                             <use href="./images/icons.svg#icon-icon-send"></use>
                         </svg>
-                    </div>
+                    </button>
                 </form>
             </div>
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="js/mobile-menu.js"></script>
 </body>
 </html>

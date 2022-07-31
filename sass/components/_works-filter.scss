@@ -1,17 +1,26 @@
 .filter {
+    @extend %list;
     display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-top: -15px;
+    width: 400px;
+
+    @media screen and (min-width: 768px) {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0;
+        margin-left: 0;
+    }
 }
 
 .filter__item {
     transition: box-shadow var(--transition-function), border-radius var(--transition-function);
-    margin-bottom: 50px;
+    margin-left: 8px;
+    margin-top: 15px;
 
-    &:not(:last-child) {
-        margin-right: 8px;
+    &:last-child {
+        margin-bottom: 46px;
     }
 
     &:hover,
@@ -20,5 +29,19 @@
                 0px 1px 2px rgba(0, 0, 0, 0.08),
                 0px 2px 2px rgba(0, 0, 0, 0.12);
         border-radius: 4px;
+    }
+
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-top: 0;
+        margin-left: 0;
+        margin-bottom: 46px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 46px;
     }
 }
