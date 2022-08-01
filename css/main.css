@@ -577,6 +577,16 @@ img {
   text-align: center;
   color: var(--title-text-color);
 }
+@media screen and (min-width: 768px) {
+  .features__title {
+    text-align: start;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__title {
+    text-align: start;
+  }
+}
 
 .features__text {
   margin-top: 0;
@@ -783,7 +793,7 @@ img {
   flex-wrap: wrap;
   margin-left: -8px;
   margin-top: -15px;
-  width: 400px;
+  margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
   .filter {
@@ -791,6 +801,12 @@ img {
     justify-content: center;
     margin-top: 0;
     margin-left: 0;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter {
+    margin-bottom: 50px;
   }
 }
 
@@ -798,9 +814,6 @@ img {
   transition: box-shadow var(--transition-function), border-radius var(--transition-function);
   margin-left: 8px;
   margin-top: 15px;
-}
-.filter__item:last-child {
-  margin-bottom: 46px;
 }
 .filter__item:hover, .filter__item:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -813,12 +826,6 @@ img {
   .filter__item {
     margin-top: 0;
     margin-left: 0;
-    margin-bottom: 46px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .filter__item {
-    margin-bottom: 46px;
   }
 }
 
@@ -1180,6 +1187,11 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+@media screen and (max-width: 479px) {
+  .modal {
+    width: calc(100vw - 15px);
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
@@ -1201,6 +1213,13 @@ img {
 }
 .button__modal-close:focus .button__modal-close-icon, .button__modal-close:hover .button__modal-close-icon {
   fill: var(--accent-color);
+}
+
+.button__modal-close-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .modal__cta {
@@ -1290,14 +1309,15 @@ img {
   border: 1px solid var(--accent-color);
 }
 
-.modal-form__checkbox-field {
-  margin-bottom: 30px;
+@media screen and (min-width: 1200px) {
+  .modal-form__checkbox-field {
+    text-align: center;
+  }
 }
 
 .modal-form__checkbox-label {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  position: relative;
+  padding-left: 25px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -1325,6 +1345,10 @@ img {
 }
 
 .modal-form__checkbox-icon {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
 }
@@ -1339,7 +1363,16 @@ img {
 }
 
 .modal-form__checkbox-policy {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
   color: var(--accent-color);
+}
+@media screen and (min-width: 1200px) {
+  .modal-form__checkbox-policy {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal-form__button {
